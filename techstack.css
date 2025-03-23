@@ -3,6 +3,7 @@ body {
   font-family: Arial, sans-serif;
   color: white;
   text-align: center;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 /* Vanta.js Background */
@@ -13,22 +14,95 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
+  
 }
+
+
 
 /* Tech Stack Section */
 .techstack {
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  min-height: 100vh; /* Use min-height instead of height */
+  background: rgba(0, 0, 0, 0.7); /* Darker overlay for better contrast */
+  padding: 80px 20px 20px; /* Add top padding to account for the navbar */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
-.card {
+.techstack h1 {
+  font-size: 2.5rem; /* Adjust heading size */
+}
+
+.techstack p {
+  font-size: 1.2rem; /* Adjust paragraph size */
+}
+
+/* Adjust for mobile devices */
+@media (max-width: 768px) {
+  .techstack h1 {
+      font-size: 2rem; /* Smaller heading on mobile */
+  }
+
+  .techstack p {
+      font-size: 1rem; /* Smaller paragraph on mobile */
+  }
+}
+
+/* Tech Item Styling */
+.tech-item {
   background: rgba(255, 255, 255, 0.9);
   color: #333;
-  border: none;
-  border-radius: 10px;
+  padding: 20px;
+  border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
-.card-img-top {
-  border-radius: 10px 10px 0 0;
+.tech-item h2 {
+  font-size: 1.8rem; /* Use rem for consistent scaling */
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+.tech-item ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.tech-item li {
+  font-size: 1.1rem; /* Use rem for consistent scaling */
+  margin-bottom: 5px;
+}
+
+/* Tech Image Styling */
+.tech-image {
+  width: 100%; /* Make images responsive */
+  max-width: 150px; /* Limit maximum size */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 12px; /* Rounded corners */
+  border: 2px solid #007BFF; /* Border color */
+  margin-bottom: 16px; /* Space below the image */
+}
+
+/* Navbar Overrides */
+.navbar {
+  background: rgba(0, 0, 0, 0.7) !important; /* Semi-transparent navbar */
+}
+
+.navbar-brand, .nav-link {
+  color: rgb(247, 246, 242) !important;
+}
+
+.nav-link:hover {
+  color: #3336df !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tech-item {
+      margin-bottom: 20px;
+  }
+
+  .tech-image {
+      max-width: 120px; /* Smaller size for mobile */
+  }
 }
