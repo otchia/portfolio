@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Stack</title>
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="techstack.css">
 </head>
 <body>
-    <!-- Background container for Vanta.js -->
-    <div id="vanta-bg"></div>
+    <!-- Background Animation -->
+    <div id="large-header" class="large-header">
+        <canvas id="connect-canvas"></canvas>
+    </div>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -29,7 +33,7 @@
                         <a class="nav-link" href="Contact.html">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="techstack.html">Tech Stack</a>
+                        <a class="nav-link active" href="techstack.html">Tech Stack</a>
                     </li>
                 </ul>
             </div>
@@ -37,20 +41,21 @@
     </nav>
 
     <!-- Tech Stack Section -->
-    <section class="techstack d-flex align-items-center justify-content-center text-center">
+    <section class="techstack">
         <div class="container">
-            <h1 class="display-5">Tech Stack</h1>
-            <p class="lead">This contains the list of programming languages and tools I have learned so far.</p>
+            <h1 class="display-5 text-center">Tech Stack</h1>
+            <p class="lead text-center">This contains the list of programming languages and tools I have learned so far.</p>
+
             <div class="row mt-4">
                 <!-- C Programming -->
                 <div class="col-md-3 mb-4">
                     <div class="tech-item">
                         <img src="c-image.png" alt="C Language" class="tech-image">
                         <h2>C Language</h2>
-                        <ul class="text-start">
+                        <ul>
                             <li>IDE: Code::Blocks, Dev-C++</li>
-                            <li>Compiler: GCC (GNU Compiler Collection)</li>
-                            <li>Debugger: GDB (GNU Debugger)</li>
+                            <li>Compiler: GCC</li>
+                            <li>Debugger: GDB</li>
                         </ul>
                     </div>
                 </div>
@@ -60,10 +65,10 @@
                     <div class="tech-item">
                         <img src="html&css.jpg" alt="HTML & CSS" class="tech-image">
                         <h2>HTML & CSS</h2>
-                        <ul class="text-start">
-                            <li>Editor: Visual Studio Code, Sublime Text</li>
-                            <li>Frameworks: Bootstrap (for responsive design)</li>
-                            <li>Tools: Chrome DevTools (for debugging)</li>
+                        <ul>
+                            <li>Editor: VS Code, Sublime Text</li>
+                            <li>Frameworks: Bootstrap</li>
+                            <li>Tools: Chrome DevTools</li>
                         </ul>
                     </div>
                 </div>
@@ -73,9 +78,9 @@
                     <div class="tech-item">
                         <img src="java.png" alt="Java" class="tech-image">
                         <h2>Java (Basic)</h2>
-                        <ul class="text-start">
-                            <li>IDE: IntelliJ IDEA, Eclipse, NetBeans</li>
-                            <li>Compiler: JDK (Java Development Kit)</li>
+                        <ul>
+                            <li>IDE: IntelliJ IDEA, Eclipse</li>
+                            <li>Compiler: JDK</li>
                             <li>Build Tool: Maven, Gradle</li>
                         </ul>
                     </div>
@@ -86,25 +91,25 @@
                     <div class="tech-item">
                         <img src="Android studioimg.png" alt="Android Studio" class="tech-image">
                         <h2>Android Studio</h2>
-                        <ul class="text-start">
+                        <ul>
                             <li>IDE: Android Studio</li>
                             <li>Language: Java, Kotlin</li>
-                            <li>Tools: Android SDK, Emulator</li>
+                            <li>Tools: Android SDK</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
             <!-- Navigation Button -->
-            <a href="index.html" class="btn btn-secondary mt-4">Go Home</a>
+            <div class="text-center">
+                <a href="index.html" class="btn btn-secondary mt-4">Go Home</a>
+            </div>
         </div>
     </section>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Vanta.js and Three.js Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
+
     <!-- Custom JavaScript -->
     <script src="script.js"></script>
 </body>
