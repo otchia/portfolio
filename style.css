@@ -1,28 +1,49 @@
-/* Custom Styles */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     color: white;
     text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling issues */
 }
 
-/* Vanta.js Background */
-#vanta-bg {
+/* Background Animation */
+.large-header {
     position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    background: #333; /* Fallback color */
+}
+
+#large-header {
+    background-image: url('https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Ensure Canvas Covers Entire Screen */
+#connect-canvas {
+    display: block;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-color: #1a1a1a; /* Fallback color */
+    width: 100vw;
+    height: 100vh;
 }
 
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5); /* Overlay */
 }
 
-/* Navbar Overrides */
+/* Navbar */
 .navbar {
     background: rgba(0, 0, 0, 0.7) !important; /* Semi-transparent navbar */
 }
@@ -35,9 +56,9 @@ body {
     color: #3336df !important;
 }
 
-/* Adjust overlay for mobile devices */
+/* Responsive Fix */
 @media (max-width: 768px) {
     .hero {
-        background: rgba(0, 0, 0, 0.3); /* Lighter overlay for better readability */
+        background: rgba(0, 0, 0, 0.3);
     }
 }

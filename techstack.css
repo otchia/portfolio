@@ -1,49 +1,53 @@
-/* Custom Styles */
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   color: white;
   text-align: center;
-  overflow-x: hidden; /* Prevent horizontal overflow */
+  margin: 0;
+  padding: 0;
+  overflow-y: auto; /* Enables scrolling */
+  background: #111; /* Dark background */
 }
 
-/* Vanta.js Background */
-#vanta-bg {
+/* Background Animation */
+.large-header {
   position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  background: #333;
+}
+
+#large-header {
+  background-image: url('https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#connect-canvas {
+  display: block;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  
+  width: 100vw;
+  height: 100vh;
 }
-
-
 
 /* Tech Stack Section */
 .techstack {
-  min-height: 100vh; /* Use min-height instead of height */
-  background: rgba(0, 0, 0, 0.7); /* Darker overlay for better contrast */
-  padding: 80px 20px 20px; /* Add top padding to account for the navbar */
-  overflow-y: auto; /* Enable vertical scrolling */
+  min-height: 100vh;
+  padding-top: 100px; /* Adjusted for navbar */
+  padding-bottom: 50px;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .techstack h1 {
-  font-size: 2.5rem; /* Adjust heading size */
+  font-size: 2.5rem;
 }
 
 .techstack p {
-  font-size: 1.2rem; /* Adjust paragraph size */
-}
-
-/* Adjust for mobile devices */
-@media (max-width: 768px) {
-  .techstack h1 {
-      font-size: 2rem; /* Smaller heading on mobile */
-  }
-
-  .techstack p {
-      font-size: 1rem; /* Smaller paragraph on mobile */
-  }
+  font-size: 1.2rem;
 }
 
 /* Tech Item Styling */
@@ -54,10 +58,11 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .tech-item h2 {
-  font-size: 1.8rem; /* Use rem for consistent scaling */
+  font-size: 1.8rem;
   margin-bottom: 10px;
   color: #007BFF;
 }
@@ -69,23 +74,23 @@ body {
 }
 
 .tech-item li {
-  font-size: 1.1rem; /* Use rem for consistent scaling */
+  font-size: 1.1rem;
   margin-bottom: 5px;
 }
 
 /* Tech Image Styling */
 .tech-image {
-  width: 100%; /* Make images responsive */
-  max-width: 150px; /* Limit maximum size */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 12px; /* Rounded corners */
-  border: 2px solid #007BFF; /* Border color */
-  margin-bottom: 16px; /* Space below the image */
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid #007BFF;
+  margin-bottom: 16px;
 }
 
-/* Navbar Overrides */
+/* Navbar */
 .navbar {
-  background: rgba(0, 0, 0, 0.7) !important; /* Semi-transparent navbar */
+  background: rgba(0, 0, 0, 0.8) !important;
 }
 
 .navbar-brand, .nav-link {
@@ -93,16 +98,24 @@ body {
 }
 
 .nav-link:hover {
-  color: #3336df !important;
+  color: #007BFF !important;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .techstack h1 {
+      font-size: 2rem;
+  }
+
+  .techstack p {
+      font-size: 1rem;
+  }
+
   .tech-item {
       margin-bottom: 20px;
   }
 
   .tech-image {
-      max-width: 120px; /* Smaller size for mobile */
+      max-width: 120px;
   }
 }

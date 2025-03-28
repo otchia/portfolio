@@ -1,39 +1,57 @@
-/* Custom Styles */
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   color: white;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling issues */
 }
 
-/* Vanta.js Background */
-#vanta-bg {
+/* Background Animation */
+.large-header {
   position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  background: #333; /* Fallback color */
+}
+
+#large-header {
+  background-image: url('https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Ensure Canvas Covers Entire Screen */
+#connect-canvas {
+  display: block;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-color: #1a1a1a; /* Fallback color */
+  width: 100vw;
+  height: 100vh;
 }
 
 /* About Section */
 .about {
   height: 100vh;
-  background: rgba(0, 0, 0, 0.7); /* Darker overlay for better contrast */
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(0, 0, 0, 0.6); /* Darker overlay */
 }
 
 .about h1 {
-  font-size: 2.5rem; /* Adjust heading size */
+  font-size: 2.5rem;
 }
 
 .about p {
-  font-size: 1.2rem; /* Adjust paragraph size */
+  font-size: 1.2rem;
 }
 
-/* Navbar Overrides */
+/* Navbar */
 .navbar {
   background: rgba(0, 0, 0, 0.7) !important; /* Semi-transparent navbar */
 }
@@ -46,13 +64,13 @@ body {
   color: #3336df !important;
 }
 
-/* Adjust for mobile devices */
+/* Responsive Fix */
 @media (max-width: 768px) {
   .about h1 {
-      font-size: 2rem; /* Smaller heading on mobile */
+      font-size: 2rem;
   }
 
   .about p {
-      font-size: 1rem; /* Smaller paragraph on mobile */
+      font-size: 1rem;
   }
 }
