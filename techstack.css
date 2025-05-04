@@ -59,32 +59,17 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   text-align: center;
-}
-
-.tech-item {
-  width: 220px; /* <-- make all cards same width */
-  height: 260px; /* <-- make all cards same height */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 260px; /* Ensure consistent height */
 }
 
 .tech-item h2 {
   font-size: 1.8rem;
   margin-bottom: 10px;
   color: #007BFF;
-}
-
-.tech-item ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  text-align: left;
-}
-
-.tech-item li {
-  font-size: 1.1rem;
-  margin-bottom: 5px;
 }
 
 /* Tech Image Styling */
@@ -96,7 +81,6 @@ body {
   border: 2px solid #007BFF;
   margin-bottom: 16px;
 }
-
 
 /* Navbar */
 .navbar {
@@ -112,20 +96,52 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .tech-item {
+    width: 220px; /* Smaller width for smaller screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .tech-item {
+    width: 220px;
+    height: auto; /* Let content grow vertically */
+  }
+}
+
 @media (max-width: 768px) {
   .techstack h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .techstack p {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .tech-item {
-      margin-bottom: 20px;
+    margin-bottom: 20px;
   }
 
   .tech-image {
-      max-width: 120px;
+    max-width: 120px;
+  }
+
+  .tech-item {
+    width: 250px; /* Larger width for tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .techstack h1 {
+    font-size: 1.6rem;
+  }
+
+  .tech-item {
+    width: 100%; /* Full width for mobile screens */
+  }
+
+  .tech-image {
+    width: 100px;
+    height: 100px;
   }
 }
