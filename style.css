@@ -1,13 +1,19 @@
-/* General Styles */
+/* Apply Tagesschrift font globally */
 body {
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Tagesschrift", system-ui, sans-serif;
     color: white;
     text-align: center;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevent scrolling issues */
+    overflow: hidden;
 }
 
+/* Optional reusable class */
+.tagesschrift-regular {
+    font-family: "Tagesschrift", system-ui, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
 /* Background Animation */
 .large-header {
@@ -16,7 +22,7 @@ body {
     height: 100vh;
     overflow: hidden;
     z-index: -1;
-    background: #333; /* Fallback color */
+    background: #333;
 }
 
 #large-header {
@@ -25,7 +31,6 @@ body {
     background-position: center;
 }
 
-/* Ensure Canvas Covers Entire Screen */
 #connect-canvas {
     display: block;
     position: absolute;
@@ -41,13 +46,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.5); /* Overlay */
-    font-family: "Times New Roman", Times, serif; /* This is good */
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    line-height: 1.8;
 }
 
 /* Navbar */
 .navbar {
-    background: rgba(0, 0, 0, 0.7) !important; /* Semi-transparent navbar */
+    background: rgba(0, 0, 0, 0.7) !important;
 }
 
 .navbar-brand, .nav-link {
@@ -61,7 +72,12 @@ body {
 /* Responsive Fix */
 @media (max-width: 768px) {
     .hero {
+        flex-direction: column;
+        padding: 2rem 1rem;
         background: rgba(0, 0, 0, 0.3);
     }
-}
 
+    .hero p {
+        font-size: 1rem;
+    }
+}
