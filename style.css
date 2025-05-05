@@ -41,6 +41,7 @@ body {
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, 0.5); /* Overlay */
+    font-family: "Times New Roman", Times, serif; /* This is good */
 }
 
 /* Navbar */
@@ -62,3 +63,4 @@ body {
         background: rgba(0, 0, 0, 0.3);
     }
 }
+

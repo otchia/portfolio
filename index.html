@@ -10,6 +10,9 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 <body>
     <!-- Background Animation -->
@@ -29,28 +32,24 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
-                
                     <li class="nav-item">
                         <a class="nav-link" href="tech-stack.html">Tech Stack</a>
                     </li>
-                
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
-                
-                
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero d-flex align-items-center justify-content-center text-center">
+    <section class="hero d-flex align-items-center justify-content-center text-center" data-aos="fade-up">
         <div class="container">
-            <h1 class="display-4">Cybeir Kim Otchia</h1>
-            <p class="lead">A passionate BSIT student and aspiring developer.</p>
-            <img src="formal-attire.png" alt="Cybeir Kim Otchia" class="img-fluid rounded-circle my-4" style="width: 150px; height: 150px;">
-            <p class="w-75 mx-auto">
+            <h1 class="display-4" data-aos="fade-up" data-aos-delay="100">Cybeir Kim Otchia</h1>
+            <p class="lead" data-aos="fade-up" data-aos-delay="200">A passionate BSIT student and aspiring developer.</p>
+            <img src="formal-attire.png" alt="Cybeir Kim Otchia" class="img-fluid rounded-circle my-4" style="width: 150px; height: 150px;" data-aos="fade-up" data-aos-delay="300">
+            <p class="w-75 mx-auto" data-aos="fade-up" data-aos-delay="400">
                 I'm Cybeir Kim I. Otchia, a 21-year-old second-year BSIT student at St. Dominic College of Asia. 
                 I have two dogs, and my hobbies include playing video games, watching movies, and going to the gym to maintain a healthy lifestyle.
             </p>
@@ -59,6 +58,12 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();  // Initialize AOS for animations
+    </script>
 
     <!-- Custom JavaScript -->
     <script src="script.js"></script>
