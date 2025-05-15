@@ -1,0 +1,83 @@
+/* Apply Tagesschrift font globally */
+body {
+    font-family: "Tagesschrift", system-ui, sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Optional reusable class */
+.tagesschrift-regular {
+    font-family: "Tagesschrift", system-ui, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Background Animation */
+.large-header {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    background: #333;
+}
+
+#large-header {
+    background-image: url('https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#connect-canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(0, 0, 0, 0.7) !important;
+}
+
+.navbar-brand, .nav-link {
+    color: rgb(236, 235, 242) !important;
+}
+
+.nav-link:hover {
+    color: #3336df !important;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
