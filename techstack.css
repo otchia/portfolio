@@ -1,0 +1,154 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto; /* Enables scrolling */
+  background: #111; /* Dark background */
+}
+
+/* Background Animation */
+.large-header {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  background: #333;
+}
+
+#large-header {
+  background-image: url('https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#connect-canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Tech Stack Section */
+.techstack {
+  min-height: 100vh;
+  padding-top: 100px; /* Adjusted for navbar */
+  padding-bottom: 50px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.techstack h1 {
+  font-size: 2.5rem;
+}
+
+.techstack p {
+  font-size: 1.2rem;
+}
+
+/* Tech Item Styling */
+.tech-item {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 260px; /* Ensure consistent height */
+}
+
+.tech-item h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+/* Tech Image Styling */
+.tech-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 2px solid #007BFF;
+  margin-bottom: 16px;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(0, 0, 0, 0.8) !important;
+}
+
+.navbar-brand, .nav-link {
+  color: rgb(247, 246, 242) !important;
+}
+
+.nav-link:hover {
+  color: #007BFF !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .tech-item {
+    width: 220px; /* Smaller width for smaller screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .tech-item {
+    width: 220px;
+    height: auto; /* Let content grow vertically */
+  }
+}
+
+@media (max-width: 768px) {
+  .techstack h1 {
+    font-size: 2rem;
+  }
+
+  .techstack p {
+    font-size: 1rem;
+  }
+
+  .tech-item {
+    margin-bottom: 20px;
+  }
+
+  .tech-image {
+    max-width: 120px;
+  }
+
+  .tech-item {
+    width: 250px; /* Larger width for tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .techstack h1 {
+    font-size: 1.6rem;
+  }
+
+  .tech-item {
+    width: 100%; /* Full width for mobile screens */
+  }
+
+  .tech-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.tagesschrift-regular {
+  font-family: "Tagesschrift", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
