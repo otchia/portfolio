@@ -1,0 +1,212 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  background: #111;
+}
+
+/* Google Font: Tagesschrift */
+.tagesschrift-regular {
+  font-family: "Tagesschrift", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Background Animation */
+.large-header {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  background: #333;
+}
+
+#large-header {
+  background-image: url('https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#connect-canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Certificates Section */
+.certificates {
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.certificates h1 {
+  font-size: 2.5rem;
+}
+
+.certificates p {
+  font-size: 1.2rem;
+}
+
+/* Certificate Card — matches tech-item style */
+.cert-item {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.cert-item h2 {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+  color: #007BFF;
+}
+
+.cert-item .cert-type {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.cert-item .cert-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 14px;
+}
+
+/* Certificate preview image — preserve aspect ratio */
+.cert-image {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 2px solid #007BFF;
+  margin-bottom: 16px;
+  background: #fff;
+}
+
+/* View Certificate button — matches contact button style */
+.cert-item .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.2s ease-in-out;
+  margin-top: auto;
+}
+
+.cert-item .btn:hover {
+  transform: scale(1.05);
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(0, 0, 0, 0.8) !important;
+}
+
+.navbar-brand, .nav-link {
+  color: rgb(247, 246, 242) !important;
+}
+
+.nav-link:hover {
+  color: #007BFF !important;
+}
+
+/* Certificate Modal */
+.cert-modal .modal-content {
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cert-modal .modal-header {
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+}
+
+.cert-modal .modal-title {
+  font-family: "Tagesschrift", system-ui;
+  color: #007BFF;
+  font-size: 1.3rem;
+}
+
+.cert-modal .modal-body {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+}
+
+.cert-modal .modal-body img {
+  max-width: 100%;
+  max-height: 75vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.cert-modal .btn-close {
+  filter: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .certificates h1 {
+    font-size: 2rem;
+  }
+
+  .certificates p {
+    font-size: 1rem;
+  }
+
+  .cert-item h2 {
+    font-size: 1.2rem;
+  }
+
+  .cert-image {
+    max-height: 150px;
+  }
+
+  .cert-modal .modal-body img {
+    max-height: 65vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .certificates h1 {
+    font-size: 1.6rem;
+  }
+
+  .cert-image {
+    max-width: 100%;
+    max-height: 140px;
+  }
+
+  .cert-modal .modal-body img {
+    max-height: 55vh;
+  }
+}
