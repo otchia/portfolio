@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cybeir Kim Otchia | Projects</title>
+
+    <!-- Google Font: Tagesschrift -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="projects.css" />
+</head>
+<body>
+    <!-- Background Animation -->
+    <div id="large-header" class="large-header">
+        <canvas id="connect-canvas"></canvas>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand tagesschrift-regular" href="index.html">Cybeir Kim Otchia</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="tech-stack.html">Tech Stack</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="certificates.html">Certificates</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="projects">
+        <div class="container">
+            <h1 class="display-5 text-center tagesschrift-regular">Projects</h1>
+            <p class="lead text-center tagesschrift-regular">
+                Selected academic and development work from my BSIT journey.
+            </p>
+
+            <div class="row mt-4 justify-content-center">
+                <!-- e-RoomReserve -->
+                <div class="col-12 col-md-10 col-lg-8 mb-4">
+                    <div class="project-item">
+                        <img
+                            src="e-roomreserve-logo.png"
+                            alt="e-RoomReserve logo"
+                            class="project-logo"
+                        />
+                        <h2 class="tagesschrift-regular">e-RoomReserve</h2>
+                        <p class="project-subtitle tagesschrift-regular mb-0">
+                            AI-Driven Smart Campus Space Optimization System
+                        </p>
+
+                        <img
+                            src="e-roomreserve-screenshot.png"
+                            alt="e-RoomReserve Sign In screenshot"
+                            class="project-image"
+                        />
+
+                        <p class="project-desc tagesschrift-regular">
+                            A smart campus platform that optimizes room usage through real-time occupancy detection and autonomous reservation control.
+                        </p>
+
+                        <p class="project-meta tagesschrift-regular mb-0">
+                            Capstone Project • St. Dominic College of Asia
+                        </p>
+                        <p class="project-tech tagesschrift-regular">
+                            Bluetooth Low Energy (BLE)
+                        </p>
+
+                        <button
+                            type="button"
+                            class="btn btn-primary tagesschrift-regular"
+                            data-bs-toggle="modal"
+                            data-bs-target="#projectModal"
+                        >
+                            View Project
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details Modal -->
+    <div
+        class="modal fade project-modal"
+        id="projectModal"
+        tabindex="-1"
+        aria-labelledby="projectModalLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModalLabel">e-RoomReserve</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img
+                        src="e-roomreserve-logo.png"
+                        alt="e-RoomReserve logo"
+                        class="project-modal-logo"
+                    />
+                    <img
+                        src="e-roomreserve-screenshot.png"
+                        alt="e-RoomReserve Sign In screenshot"
+                    />
+                    <p class="project-full-title tagesschrift-regular">
+                        <strong>Official Title:</strong>
+                        e-RoomReserve: AI-Driven Smart Campus Space Optimization System with Real-Time Occupancy Detection and Autonomous Reservation Control using Bluetooth Low Energy (BLE) Technology
+                    </p>
+                    <p class="project-detail-meta tagesschrift-regular">
+                        Capstone Project • St. Dominic College of Asia
+                    </p>
+                    <p class="project-detail-meta tagesschrift-regular">
+                        Technology: Bluetooth Low Energy (BLE)
+                    </p>
+                    <p class="tagesschrift-regular mb-0" style="font-size: 0.95rem; color: #444; line-height: 1.5;">
+                        e-RoomReserve is an AI-driven smart campus system designed to improve space utilization through real-time occupancy detection and autonomous reservation control using Bluetooth Low Energy (BLE) technology.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
