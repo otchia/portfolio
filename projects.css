@@ -57,7 +57,7 @@ body {
   font-size: 1.2rem;
 }
 
-/* Project Card — matches cert/tech card style */
+/* Project Card */
 .project-item {
   background: rgba(255, 255, 255, 0.9);
   color: #333;
@@ -65,15 +65,26 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  text-align: center;
+  text-align: left;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
+}
+
+.project-card-media {
+  min-width: 0;
+}
+
+.project-card-body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  height: 100%;
+  align-items: flex-start;
+  min-width: 0;
 }
 
 .project-item h2 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-bottom: 6px;
   color: #007BFF;
 }
@@ -81,9 +92,8 @@ body {
 .project-item .project-subtitle {
   font-size: 1rem;
   color: #555;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   line-height: 1.4;
-  max-width: 420px;
 }
 
 .project-item .project-desc {
@@ -91,7 +101,6 @@ body {
   color: #444;
   margin-bottom: 12px;
   line-height: 1.5;
-  max-width: 480px;
 }
 
 .project-item .project-meta {
@@ -103,35 +112,48 @@ body {
 .project-item .project-tech {
   font-size: 0.9rem;
   color: #007BFF;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
-/* Project logo — preserve aspect ratio */
 .project-logo {
   width: 100%;
-  max-width: 220px;
+  max-width: 160px;
   height: auto;
   object-fit: contain;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   background: #fff;
   border-radius: 8px;
-  padding: 8px;
+  padding: 6px;
 }
 
-/* Project screenshot — preserve aspect ratio */
 .project-image {
   width: 100%;
-  max-width: 480px;
   height: auto;
-  max-height: 260px;
+  max-height: 280px;
   object-fit: contain;
   border-radius: 12px;
   border: 2px solid #007BFF;
-  margin-bottom: 16px;
   background: #fff;
+  display: block;
 }
 
-/* Button — matches existing portfolio buttons */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.project-tags span {
+  background: rgba(0, 123, 255, 0.12);
+  color: #007BFF;
+  border: 1px solid #007BFF;
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-family: "Tagesschrift", system-ui;
+}
+
 .project-item .btn {
   display: inline-flex;
   align-items: center;
@@ -140,7 +162,6 @@ body {
   border-radius: 8px;
   font-weight: bold;
   transition: transform 0.2s ease-in-out;
-  margin-top: auto;
 }
 
 .project-item .btn:hover {
@@ -177,47 +198,112 @@ body {
 .project-modal .modal-title {
   font-family: "Tagesschrift", system-ui;
   color: #007BFF;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   line-height: 1.4;
 }
 
 .project-modal .modal-body {
-  padding: 1.25rem;
+  padding: 1.5rem;
 }
 
-.project-modal .modal-body img {
-  max-width: 100%;
-  max-height: 50vh;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  border-radius: 8px;
-  display: block;
-  margin: 0 auto 1rem auto;
-  border: 1px solid #e0e0e0;
-}
-
-.project-modal .project-modal-logo {
-  max-width: 200px;
-  max-height: 120px;
-  border: none;
-  margin-bottom: 0.75rem;
-}
-
-.project-modal .project-full-title {
-  font-size: 0.95rem;
-  color: #444;
-  line-height: 1.5;
+.project-detail-hero {
+  text-align: center;
   margin-bottom: 1rem;
 }
 
-.project-modal .project-detail-meta {
-  font-size: 0.9rem;
+.project-modal-logo {
+  max-width: 180px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto 0.5rem auto;
+  display: block;
+  background: #fff;
+  border-radius: 8px;
+  padding: 6px;
+}
+
+.project-detail-kicker {
+  font-size: 0.85rem;
   color: #666;
+  margin-bottom: 4px;
+}
+
+.project-detail-name {
+  color: #007BFF;
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.project-detail-sub {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.project-detail-shot {
+  width: auto;
+  max-width: 100%;
+  max-height: 280px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 2px solid #007BFF;
+  background: #fff;
+  display: block;
+  margin: 0 auto 1.25rem auto;
+}
+
+.project-detail-section {
+  margin-bottom: 1.1rem;
+}
+
+.project-detail-section-last {
+  margin-bottom: 0;
+}
+
+.project-detail-section h4 {
+  color: #007BFF;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.project-detail-section p,
+.project-detail-section li {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.55;
+}
+
+.project-detail-section ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.project-detail-section li {
   margin-bottom: 0.35rem;
 }
 
+.project-tags-modal {
+  margin-bottom: 0;
+}
+
 /* Responsive Design */
+@media (max-width: 992px) {
+  .project-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .project-card-body {
+    align-items: center;
+  }
+
+  .project-image {
+    max-height: 240px;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 768px) {
   .projects h1 {
     font-size: 2rem;
@@ -231,7 +317,8 @@ body {
     font-size: 1.35rem;
   }
 
-  .project-image {
+  .project-image,
+  .project-detail-shot {
     max-height: 200px;
   }
 
@@ -245,7 +332,12 @@ body {
     font-size: 1.6rem;
   }
 
-  .project-image {
+  .project-item {
+    padding: 18px;
+  }
+
+  .project-image,
+  .project-detail-shot {
     max-height: 180px;
   }
 }

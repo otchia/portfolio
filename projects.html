@@ -72,45 +72,51 @@
             </p>
 
             <div class="row mt-4 justify-content-center">
-                <!-- e-RoomReserve -->
-                <div class="col-12 col-md-10 col-lg-8 mb-4">
-                    <div class="project-item">
-                        <img
-                            src="e-roomreserve-logo.png"
-                            alt="e-RoomReserve logo"
-                            class="project-logo"
-                        />
-                        <h2 class="tagesschrift-regular">e-RoomReserve</h2>
-                        <p class="project-subtitle tagesschrift-regular mb-0">
-                            AI-Driven Smart Campus Space Optimization System
-                        </p>
+                <div class="col-12 col-lg-10 mb-4">
+                    <article class="project-item">
+                        <div class="project-card-media">
+                            <img
+                                src="e-roomreserve-screenshot.png"
+                                alt="e-RoomReserve Sign In screen"
+                                class="project-image"
+                            />
+                        </div>
 
-                        <img
-                            src="e-roomreserve-screenshot.png"
-                            alt="e-RoomReserve Sign In screenshot"
-                            class="project-image"
-                        />
-
-                        <p class="project-desc tagesschrift-regular">
-                            A smart campus platform that optimizes room usage through real-time occupancy detection and autonomous reservation control.
-                        </p>
-
-                        <p class="project-meta tagesschrift-regular mb-0">
-                            Capstone Project • St. Dominic College of Asia
-                        </p>
-                        <p class="project-tech tagesschrift-regular">
-                            Bluetooth Low Energy (BLE)
-                        </p>
-
-                        <button
-                            type="button"
-                            class="btn btn-primary tagesschrift-regular"
-                            data-bs-toggle="modal"
-                            data-bs-target="#projectModal"
-                        >
-                            View Project
-                        </button>
-                    </div>
+                        <div class="project-card-body">
+                            <img
+                                src="e-roomreserve-logo.png"
+                                alt="e-RoomReserve logo"
+                                class="project-logo"
+                            />
+                            <h2 class="tagesschrift-regular">e-RoomReserve</h2>
+                            <p class="project-subtitle tagesschrift-regular">
+                                AI-Driven Smart Campus Space Optimization System
+                            </p>
+                            <p class="project-desc tagesschrift-regular">
+                                An AI-integrated room reservation and occupancy monitoring system for St. Dominic College of Asia, combining mobile and web apps with BLE beacon presence detection.
+                            </p>
+                            <p class="project-meta tagesschrift-regular">
+                                Capstone Project • St. Dominic College of Asia
+                            </p>
+                            <p class="project-tech tagesschrift-regular">
+                                Bluetooth Low Energy (BLE)
+                            </p>
+                            <div class="project-tags">
+                                <span>Next.js</span>
+                                <span>React Native</span>
+                                <span>Firebase</span>
+                                <span>ESP32</span>
+                            </div>
+                            <button
+                                type="button"
+                                class="btn btn-primary tagesschrift-regular"
+                                data-bs-toggle="modal"
+                                data-bs-target="#projectModal"
+                            >
+                                View Project
+                            </button>
+                        </div>
+                    </article>
                 </div>
             </div>
         </div>
@@ -124,35 +130,95 @@
         aria-labelledby="projectModalLabel"
         aria-hidden="true"
     >
-        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="projectModalLabel">e-RoomReserve</h5>
+                    <h5 class="modal-title tagesschrift-regular" id="projectModalLabel">e-RoomReserve</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <img
-                        src="e-roomreserve-logo.png"
-                        alt="e-RoomReserve logo"
-                        class="project-modal-logo"
-                    />
+                    <div class="project-detail-hero">
+                        <img
+                            src="e-roomreserve-logo.png"
+                            alt="e-RoomReserve logo"
+                            class="project-modal-logo"
+                        />
+                        <p class="project-detail-kicker tagesschrift-regular">
+                            Capstone Project • May 2026
+                        </p>
+                        <h3 class="project-detail-name tagesschrift-regular">e-RoomReserve</h3>
+                        <p class="project-detail-sub tagesschrift-regular">
+                            AI-Driven Smart Campus Space Optimization System
+                        </p>
+                    </div>
+
                     <img
                         src="e-roomreserve-screenshot.png"
-                        alt="e-RoomReserve Sign In screenshot"
+                        alt="e-RoomReserve Sign In screen"
+                        class="project-detail-shot"
                     />
-                    <p class="project-full-title tagesschrift-regular">
-                        <strong>Official Title:</strong>
-                        e-RoomReserve: AI-Driven Smart Campus Space Optimization System with Real-Time Occupancy Detection and Autonomous Reservation Control using Bluetooth Low Energy (BLE) Technology
-                    </p>
-                    <p class="project-detail-meta tagesschrift-regular">
-                        Capstone Project • St. Dominic College of Asia
-                    </p>
-                    <p class="project-detail-meta tagesschrift-regular">
-                        Technology: Bluetooth Low Energy (BLE)
-                    </p>
-                    <p class="tagesschrift-regular mb-0" style="font-size: 0.95rem; color: #444; line-height: 1.5;">
-                        e-RoomReserve is an AI-driven smart campus system designed to improve space utilization through real-time occupancy detection and autonomous reservation control using Bluetooth Low Energy (BLE) technology.
-                    </p>
+
+                    <section class="project-detail-section">
+                        <h4 class="tagesschrift-regular">Official Title</h4>
+                        <p class="tagesschrift-regular">
+                            e-RoomReserve: AI-Driven Smart Campus Space Optimization System with Real-Time Occupancy Detection and Autonomous Reservation Control using Bluetooth Low Energy (BLE) Technology
+                        </p>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h4 class="tagesschrift-regular">Overview</h4>
+                        <p class="tagesschrift-regular">
+                            e-RoomReserve is an AI-integrated room reservation and occupancy monitoring system developed for St. Dominic College of Asia. It addresses inefficiencies in the school’s manual room scheduling process by combining a mobile and web application, BLE beacon-based presence detection using ESP32, a faculty approval workflow, automated staff notifications, AI-based room recommendations, and sentiment analysis of post-reservation feedback.
+                        </p>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h4 class="tagesschrift-regular">Problem</h4>
+                        <p class="tagesschrift-regular">
+                            Campus rooms were managed through digital logbooks, verbal coordination, and visual inspection. That led to no-shows, double bookings, unverified occupancy, and extra work for faculty and staff. Users also had no way to find a suitable available room based on capacity, type, and amenities.
+                        </p>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h4 class="tagesschrift-regular">Key Capabilities</h4>
+                        <ul class="tagesschrift-regular">
+                            <li>Paperless reservations, faculty approval, bulk class scheduling, and status tracking on mobile and web</li>
+                            <li>ESP32 BLE beacon presence detection that verifies the user is near the room before activating a reservation</li>
+                            <li>Real-time occupancy monitoring with automated vacancy handling after a configurable timeout</li>
+                            <li>Staff alerts for BLE signal loss, overtime occupancy, and fallback physical inspection</li>
+                            <li>AI room recommendations using content-based filtering when a preferred room is unavailable</li>
+                            <li>Post-reservation feedback with VADER sentiment analysis to support facility decisions</li>
+                        </ul>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h4 class="tagesschrift-regular">Architecture</h4>
+                        <p class="tagesschrift-regular">
+                            The system uses a four-layer architecture: a Presentation Layer (React Native/Expo mobile app and Next.js web portal), an Application Layer (Next.js API routes), a Data Layer (Firebase and Supabase), and a Device Layer (ESP32 BLE beacons). Role-based access covers students, faculty, utility staff, building administrators, and super administrators.
+                        </p>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h4 class="tagesschrift-regular">Tech Stack</h4>
+                        <div class="project-tags project-tags-modal">
+                            <span>Next.js</span>
+                            <span>React Native / Expo</span>
+                            <span>Firebase</span>
+                            <span>Firestore</span>
+                            <span>Supabase</span>
+                            <span>ESP32 BLE</span>
+                            <span>VADER</span>
+                            <span>Agile / Scrum</span>
+                        </div>
+                    </section>
+
+                    <section class="project-detail-section project-detail-section-last">
+                        <h4 class="tagesschrift-regular">Institution</h4>
+                        <p class="tagesschrift-regular mb-0">
+                            School of Communication, Multimedia, and Computer Studies<br />
+                            St. Dominic College of Asia • City of Bacoor, Cavite
+                        </p>
+                    </section>
                 </div>
             </div>
         </div>
