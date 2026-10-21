@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const memberHotspots = [...document.querySelectorAll(".member-hotspot")];
+    memberHotspots.forEach((hotspot) => {
+        const pin = hotspot.querySelector(".member-pin");
+        pin?.addEventListener("click", () => {
+            memberHotspots.forEach((other) => {
+                if (other !== hotspot) other.open = false;
+            });
+        });
+    });
+
     const canvas = document.getElementById("connect-canvas");
     const context = canvas?.getContext("2d");
     if (!canvas || !context || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;

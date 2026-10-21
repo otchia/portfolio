@@ -180,7 +180,22 @@ a { color: inherit; }
 .team-photo-wrap { position: relative; min-width: 0; overflow: hidden; border-radius: 17px; background: #15282c; box-shadow: 0 20px 50px rgba(0, 0, 0, .28); }
 .team-photo { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 48%; }
 .team-photo-wrap::after { position: absolute; inset: 35% 0 0; content: ""; background: linear-gradient(transparent, rgba(5, 19, 24, .55)); pointer-events: none; }
-.photo-label { position: absolute; z-index: 1; right: 14px; bottom: 13px; left: 14px; width: fit-content; max-width: calc(100% - 28px); padding: 8px 12px; border: 1px solid rgba(245, 248, 239, .22); border-radius: 999px; color: white; background: rgba(7, 22, 27, .72); font-size: .7rem; backdrop-filter: blur(8px); }
+.member-hotspot { position: static; margin: 0; }
+.member-pin { position: absolute; z-index: 2; top: 56%; display: grid; width: 42px; height: 42px; place-items: center; border: 3px solid var(--mint); border-radius: 50%; background: rgba(6, 19, 24, .84); box-shadow: 0 0 0 5px rgba(145, 224, 194, .13), 0 5px 18px rgba(0, 0, 0, .3); cursor: pointer; list-style: none; transform: translate(-50%, -50%); }
+.hotspot-adrian .member-pin { left: 18%; }
+.hotspot-cyrus .member-pin { left: 34%; }
+.hotspot-joseph .member-pin { left: 64%; }
+.hotspot-cybeir .member-pin { left: 84%; }
+.member-pin::-webkit-details-marker { display: none; }
+.member-pin::before { width: 10px; height: 10px; border-radius: 50%; background: var(--mint); content: ""; }
+.member-pin:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+.member-tooltip { display: block; position: absolute; z-index: 6; right: auto; bottom: 14px; left: 50%; box-sizing: border-box; width: min(370px, calc(100% - 28px)); max-height: calc(100% - 72px); overflow-y: auto; overscroll-behavior: contain; padding: 14px 16px; border: 1px solid rgba(145, 224, 194, .34); border-radius: 15px; color: var(--ink); background: rgba(6, 19, 24, .97); box-shadow: 0 16px 42px rgba(0, 0, 0, .4); opacity: 0; visibility: hidden; transform: translate(-50%, 5px); transition: opacity .18s ease, transform .18s ease, visibility .18s ease; }
+.member-hotspot:hover .member-tooltip, .member-hotspot:focus-within .member-tooltip, .member-hotspot[open] .member-tooltip { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+.member-tooltip strong, .member-tooltip .member-role { display: block; }
+.member-tooltip strong { margin-bottom: 2px; color: var(--ink); font-size: .9rem; font-weight: 700; line-height: 1.4; }
+.member-role { color: var(--mint); font-size: .75rem; font-weight: 700; line-height: 1.45; }
+.member-tooltip ul { display: grid; gap: 4px; margin: 9px 0 0; padding-left: 17px; color: #c8d5d1; font-size: .75rem; line-height: 1.45; }
+.photo-label { position: absolute; z-index: 1; top: 13px; right: 14px; left: 14px; width: fit-content; max-width: calc(100% - 28px); padding: 8px 12px; border: 1px solid rgba(245, 248, 239, .22); border-radius: 999px; color: white; background: rgba(7, 22, 27, .72); font-size: .7rem; backdrop-filter: blur(8px); }
 .photo-label-dot { width: 6px; height: 6px; margin-right: 6px; }
 .team-content .eyebrow { margin-bottom: 12px; }
 .team-content h2, .build-copy h2 { margin: 0; font-size: clamp(2.25rem, 4.2vw, 3.65rem); font-weight: 620; letter-spacing: -.07em; line-height: 1.05; }
@@ -255,6 +270,10 @@ a { color: inherit; }
   .team-section { gap: 28px; padding: 20px; }
   .team-photo { aspect-ratio: 4 / 3; }
   .team-list { grid-template-columns: 1fr; }
+  .member-pin { top: 68%; }
+  .member-tooltip { top: 12px; right: auto; bottom: auto; left: 50%; width: min(370px, calc(100% - 24px)); max-height: calc(68% - 24px); transform: translate(-50%, -4px); }
+  .member-hotspot:hover .member-tooltip, .member-hotspot:focus-within .member-tooltip, .member-hotspot[open] .member-tooltip { transform: translate(-50%, 0); }
+  .photo-label { top: auto; bottom: 13px; }
   .build-section { grid-template-columns: 1fr; gap: 24px; padding: 70px 0 55px; }
   .past-project-heading { grid-template-columns: 120px minmax(0, 1fr); gap: 16px; }
   .past-project-team { grid-template-columns: 1fr; }
