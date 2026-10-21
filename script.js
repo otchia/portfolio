@@ -1,72 +1,66 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const canvas = document.getElementById("connect-canvas");
-    const ctx = canvas.getContext("2d");
+    const context = canvas?.getContext("2d");
+    if (!canvas || !context || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    let width, height;
+    let width = 0;
+    let height = 0;
     let points = [];
-    let target = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+    let pointer = { x: -1000, y: -1000 };
+    const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
 
     function resizeCanvas() {
         width = window.innerWidth;
         height = window.innerHeight;
-        canvas.width = width;
-        canvas.height = height;
-        createPoints();
+        canvas.width = Math.round(width * pixelRatio);
+        canvas.height = Math.round(height * pixelRatio);
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
+        context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+
+        const count = Math.max(28, Math.min(76, Math.round((width * height) / 24000)));
+        points = Array.from({ length: count }, () => ({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            radius: 1 + Math.random() * 1.2
+        }));
     }
 
-    function createPoints() {
-        points = [];
-        for (let x = 0; x < width; x += width / 20) {
-            for (let y = 0; y < height; y += height / 20) {
-                points.push({
-                    x: x + Math.random() * width / 20,
-                    y: y + Math.random() * height / 20
-                });
-            }
-        }
-    }
-
-    function animate() {
-        ctx.clearRect(0, 0, width, height);
-
+    function draw() {
+        context.clearRect(0, 0, width, height);
         for (let i = 0; i < points.length; i++) {
-            let p = points[i];
+            const point = points[i];
+            const pointerDistance = Math.hypot(pointer.x - point.x, pointer.y - point.y);
+            const glow = Math.max(0, 1 - pointerDistance / 220);
 
-            let dx = target.x - p.x;
-            let dy = target.y - p.y;
-            let distance = Math.sqrt(dx * dx + dy * dy);
-            let opacity = Math.max(0, 1 - distance / 200);
+            context.beginPath();
+            context.arc(point.x, point.y, point.radius + glow, 0, Math.PI * 2);
+            context.fillStyle = `rgba(145, 224, 194, ${0.16 + glow * 0.55})`;
+            context.fill();
 
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, 2, 0, 2 * Math.PI);
-            ctx.fillStyle = `rgba(255, 255, 255, ${opacity})`;
-            ctx.fill();
-
-            for (let j = 0; j < points.length; j++) {
-                if (i !== j) {
-                    let p2 = points[j];
-                    let dist = Math.sqrt((p2.x - p.x) ** 2 + (p2.y - p.y) ** 2);
-                    if (dist < 100) {
-                        ctx.beginPath();
-                        ctx.moveTo(p.x, p.y);
-                        ctx.lineTo(p2.x, p2.y);
-                        ctx.strokeStyle = `rgba(255, 255, 255, ${opacity / 2})`;
-                        ctx.stroke();
-                    }
+            for (let j = i + 1; j < points.length; j++) {
+                const other = points[j];
+                const distance = Math.hypot(other.x - point.x, other.y - point.y);
+                if (distance < 130) {
+                    context.beginPath();
+                    context.moveTo(point.x, point.y);
+                    context.lineTo(other.x, other.y);
+                    context.strokeStyle = `rgba(145, 224, 194, ${(1 - distance / 130) * 0.12})`;
+                    context.lineWidth = 1;
+                    context.stroke();
                 }
             }
         }
-
-        requestAnimationFrame(animate);
+        requestAnimationFrame(draw);
     }
 
-    window.addEventListener("resize", resizeCanvas);
-    window.addEventListener("mousemove", function (e) {
-        target.x = e.clientX;
-        target.y = e.clientY;
-    });
-
+    window.addEventListener("resize", resizeCanvas, { passive: true });
+    window.addEventListener("mousemove", (event) => {
+        pointer = { x: event.clientX, y: event.clientY };
+    }, { passive: true });
+    window.addEventListener("mouseleave", () => {
+        pointer = { x: -1000, y: -1000 };
+    }, { passive: true });
     resizeCanvas();
-    animate();
+    draw();
 });
-

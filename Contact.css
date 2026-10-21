@@ -1,102 +1,26 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  color: white;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  overflow: hidden; /* Prevent scrolling issues */
-}
-
-/* Google Font: Tagesschrift */
-.tagesschrift-regular {
-  font-family: "Tagesschrift", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* Background Animation */
-.large-header {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  z-index: -1;
-  background: #333; /* Fallback color */
-}
-
-#large-header {
-  background-image: url('https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-/* Ensure Canvas Covers Entire Screen */
-#connect-canvas {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-}
-
-/* Contact Section */
-.contact {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.6); /* Darker overlay */
-}
-
-.contact h1, .contact p {
-  font-family: "Tagesschrift", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* Navbar */
-.navbar {
-  background: rgba(0, 0, 0, 0.7) !important; /* Semi-transparent navbar */
-}
-
-.navbar-brand, .nav-link {
-  color: rgb(236, 235, 242) !important;
-}
-
-.nav-link:hover {
-  color: #3336df !important;
-}
-
-/* Contact Buttons */
-.contact-item .btn {
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: transform 0.2s ease-in-out;
-}
-
-.contact-item .btn:hover {
-  transform: scale(1.05);
-}
-
-/* Contact Icons */
-.contact-icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
-}
-
-/* Responsive Fix */
-@media (max-width: 768px) {
-  .contact h1 {
-      font-size: 2rem;
-  }
-
-  .contact p {
-      font-size: 1rem;
-  }
-}
+.contact-main { display: flex; flex-direction: column; }
+.contact-main > .container { display: flex; flex: 1; flex-direction: column; justify-content: center; }
+.contact-layout { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(330px, .95fr); align-items: center; gap: clamp(44px, 8vw, 105px); min-height: 570px; padding: 25px 0 50px; }
+.contact-copy .eyebrow { margin-bottom: 20px; }
+.contact-copy h1 { margin: 0; font-size: clamp(3.3rem, 7vw, 6.1rem); font-weight: 650; letter-spacing: -.08em; line-height: .98; }
+.contact-copy h1 span { color: var(--mint); }
+.contact-copy > p:not(.eyebrow) { max-width: 520px; margin: 18px 0 25px; color: var(--muted); font-size: 1rem; line-height: 1.8; }
+.contact-links { display: grid; max-width: 510px; gap: 11px; }
+.contact-link-card { display: grid; grid-template-columns: 48px minmax(0, 1fr) 28px; align-items: center; gap: 14px; padding: 15px 17px; border: 1px solid var(--line); border-radius: 15px; background: rgba(13, 37, 44, .83); text-decoration: none; transition: transform .2s ease, border-color .2s ease, background .2s ease; }
+.contact-link-card:hover { transform: translateX(3px); border-color: rgba(145, 224, 194, .35); background: rgba(18, 48, 56, .95); }
+.contact-link-card img { width: 46px; height: 46px; padding: 6px; border-radius: 12px; object-fit: contain; background: #f7f7f4; }
+.contact-link-card > span { display: grid; gap: 2px; }
+.contact-link-card strong { color: var(--ink); font-size: .91rem; }
+.contact-link-card small { color: var(--muted); font-size: .73rem; }
+.contact-link-card b { color: var(--mint); font-size: 1.1rem; font-weight: 500; }
+.contact-aside { position: relative; min-height: 350px; padding: 38px; overflow: hidden; border: 1px solid rgba(145, 224, 194, .19); border-radius: 25px; background: radial-gradient(ellipse at 83% 8%, rgba(63, 132, 118, .24), transparent 48%), linear-gradient(145deg, rgba(20, 53, 60, .96), rgba(9, 29, 36, .97)); }
+.contact-orbit { position: absolute; top: -48px; right: -38px; display: grid; width: 210px; height: 210px; place-items: center; border: 1px solid rgba(145, 224, 194, .22); border-radius: 50%; color: rgba(145, 224, 194, .75); font-size: 3rem; }
+.contact-orbit::before, .contact-orbit::after { position: absolute; inset: 20px; border: 1px dashed rgba(240, 193, 138, .2); border-radius: 50%; content: ""; }
+.contact-orbit::after { inset: 48px; border-style: solid; border-color: rgba(145, 224, 194, .13); }
+.contact-aside-label { position: relative; margin: 140px 0 12px; color: var(--gold); font-size: .69rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.contact-aside h2 { position: relative; max-width: 390px; margin: 0; font-size: clamp(2rem, 3.8vw, 3.15rem); font-weight: 620; letter-spacing: -.07em; line-height: 1.06; }
+.contact-aside h2 span { color: var(--mint); }
+.contact-aside > p:last-of-type { position: relative; margin: 14px 0 0; color: var(--muted); font-size: .85rem; }
+.contact-aside-mark { position: absolute; right: 25px; bottom: 23px; color: rgba(208, 232, 219, .38); font-size: .68rem; letter-spacing: .2em; }
+@media (max-width: 800px) { .contact-layout { grid-template-columns: 1fr; gap: 32px; padding: 20px 0 40px; } .contact-aside { min-height: 300px; } .contact-aside-label { margin-top: 112px; } }
+@media (max-width: 480px) { .contact-copy h1 { font-size: clamp(3.2rem, 14vw, 4.6rem); } .contact-aside { padding: 25px; } .contact-aside-label { margin-top: 100px; } .contact-link-card { grid-template-columns: 42px minmax(0, 1fr) 22px; gap: 10px; padding: 13px; } .contact-link-card img { width: 40px; height: 40px; } }

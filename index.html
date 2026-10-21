@@ -1,82 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybeir Kim Otchia | Home</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Google Font: Tagesschrift -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- AOS Library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#081920" />
+    <meta name="description" content="Portfolio of Cybeir Kim Otchia, a BSIT student at St. Dominic College of Asia." />
+    <title>Cybeir Kim Otchia | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="portfolio.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Background Animation -->
-    <div id="large-header" class="large-header">
-        <canvas id="connect-canvas"></canvas>
-    </div>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div id="large-header" class="large-header" aria-hidden="true"><canvas id="connect-canvas"></canvas></div>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Main navigation">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Cybeir Kim Otchia</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="projects.html">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="tech-stack.html">Tech Stack</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="certificates.html">Certificates</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
+            <a class="navbar-brand" href="index.html"><span class="brand-mark" aria-hidden="true">C</span> Cybeir Kim Otchia</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav"><ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="tech-stack.html">Tech Stack</a></li>
+                <li class="nav-item"><a class="nav-link" href="certificates.html">Certificates</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul></div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero d-flex align-items-center justify-content-center text-center" data-aos="fade-up">
+    <main id="top" class="site-main home-main">
         <div class="container">
-            <h1 class="display-4" data-aos="fade-up" data-aos-delay="100">Cybeir Kim Otchia</h1>
-            <p class="lead" data-aos="fade-up" data-aos-delay="200">A passionate BSIT student and aspiring developer.</p>
-            <img src="formal-attire.png" alt="Cybeir Kim Otchia" class="img-fluid rounded-circle my-4" style="width: 150px; height: 150px;" data-aos="fade-up" data-aos-delay="300">
-            <p class="w-75 mx-auto" data-aos="fade-up" data-aos-delay="400">
-                I'm Cybeir Kim I. Otchia, a 4th Year BSIT Student at St. Dominic College of Asia. 
-                I have two dogs, and my hobbies include playing video games, watching movies, and going to the gym to maintain a healthy lifestyle.
-            </p>
+            <section class="home-hero" aria-labelledby="home-title">
+                <div class="home-copy">
+                    <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Portfolio · BSIT student</p>
+                    <h1 id="home-title">Hi, I’m<br /><span>Cybeir Kim.</span></h1>
+                    <p class="home-role">4th Year BSIT Student <span>·</span> St. Dominic College of Asia</p>
+                    <p class="home-description">I’m passionate about technology, enjoy learning new skills, and hope to build a career creating useful digital experiences. Here’s a little of what I’ve been working on.</p>
+                    <div class="home-actions">
+                        <a class="primary-button" href="projects.html">Explore my projects <span aria-hidden="true">↗</span></a>
+                        <a class="secondary-button" href="about.html">A little about me</a>
+                    </div>
+                    <div class="home-note"><span class="home-note-line" aria-hidden="true"></span><span>Curious by nature. Always learning.</span></div>
+                </div>
+                <div class="home-portrait-column">
+                    <div class="portrait-glow" aria-hidden="true"></div>
+                    <figure class="portrait-card">
+                        <img src="formal-attire.png" alt="Cybeir Kim Otchia in formal attire" class="home-portrait" />
+                        <figcaption><span>Cybeir Kim Otchia</span><small>Student · Aspiring developer</small></figcaption>
+                    </figure>
+                    <div class="portrait-sticker" aria-hidden="true"><span>Learning<br />by building</span><b>✳</b></div>
+                </div>
+            </section>
+
+            <section class="home-project" aria-labelledby="home-project-title">
+                <div class="home-project-mark"><img src="e-roomreserve-logo.png" alt="" /></div>
+                <div class="home-project-copy">
+                    <p class="eyebrow">Featured capstone</p>
+                    <h2 id="home-project-title">e-RoomReserve</h2>
+                    <p>An AI-integrated campus room reservation and occupancy monitoring project developed with Group 4.</p>
+                </div>
+                <a class="project-arrow" href="projects.html" aria-label="Read about e-RoomReserve">↗</a>
+            </section>
+
+            <footer class="site-footer"><a href="#top">Back to top ↑</a><span>Cybeir Kim Otchia · Portfolio</span></footer>
         </div>
-    </section>
+    </main>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- AOS JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init();  // Initialize AOS for animations
-    </script>
-
-    <!-- Custom JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>

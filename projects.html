@@ -3,231 +3,183 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Cybeir Kim Otchia | Projects</title>
-
-    <!-- Google Font: Tagesschrift -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet" />
-
-    <!-- Bootstrap CSS -->
+    <meta name="theme-color" content="#081920" />
+    <meta name="description" content="Academic projects by Cybeir Kim Otchia, including e-RoomReserve for campus room reservations and SariSite for neighborhood sari-sari store ordering." />
+    <title>Projects | Cybeir Kim Otchia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Custom CSS -->
+    <link rel="stylesheet" href="portfolio.css" />
     <link rel="stylesheet" href="projects.css" />
 </head>
 <body>
-    <!-- Background Animation -->
-    <div id="large-header" class="large-header">
+    <div id="large-header" class="large-header" aria-hidden="true">
         <canvas id="connect-canvas"></canvas>
     </div>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Main navigation">
         <div class="container">
-            <a class="navbar-brand tagesschrift-regular" href="index.html">Cybeir Kim Otchia</a>
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
+            <a class="navbar-brand" href="index.html"><span class="brand-mark" aria-hidden="true">C</span> Cybeir Kim Otchia</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="projects.html">Projects</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="tech-stack.html">Tech Stack</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="certificates.html">Certificates</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="projects.html" aria-current="page">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tech-stack.html">Tech Stack</a></li>
+                    <li class="nav-item"><a class="nav-link" href="certificates.html">Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Projects Section -->
-    <section class="projects">
+    <main id="projects" class="page-shell">
         <div class="container">
-            <h1 class="display-5 text-center tagesschrift-regular">Projects</h1>
-            <p class="lead text-center tagesschrift-regular">
-                Selected academic and development work from my BSIT journey.
-            </p>
+            <header class="page-intro">
+                <div>
+                    <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Selected work · BSIT</p>
+                    <h1>Projects with<br /><span>purpose.</span></h1>
+                </div>
+                <p class="intro-copy">A closer look at the ideas, people, and thoughtful engineering behind my academic work.</p>
+            </header>
 
-            <div class="row mt-4 justify-content-center">
-                <div class="col-12 col-lg-10 mb-4">
-                    <article class="project-item">
-                        <div class="project-card-media">
-                            <img
-                                src="e-roomreserve-screenshot.png"
-                                alt="e-RoomReserve Sign In screen"
-                                class="project-image"
-                            />
-                        </div>
+            <article class="project-feature" aria-labelledby="eroom-title">
+                <div class="feature-copy">
+                    <p class="eyebrow feature-eyebrow">Featured capstone <span>·</span> Group 4</p>
+                    <h2 id="eroom-title">e-Room<span>Reserve</span></h2>
+                    <p class="feature-subtitle">AI-Driven Smart Campus Space Optimization System</p>
+                    <p class="feature-description">A smarter way to find, reserve, and manage campus rooms. e-RoomReserve brings room booking and occupancy monitoring together, using BLE beacon technology to help make room use more visible, reliable, and efficient at St. Dominic College of Asia.</p>
+                    <div class="feature-actions">
+                        <a class="button-primary" href="https://eroomreserve.vercel.app/" target="_blank" rel="noopener noreferrer">Explore the live app <span aria-hidden="true">↗</span></a>
+                        <a class="text-link" href="#objectives">See the objectives <span aria-hidden="true">↓</span></a>
+                    </div>
+                    <div class="feature-meta" aria-label="Project details">
+                        <div><span>Project type</span><strong>Capstone · IoT</strong></div>
+                        <div><span>Institution</span><strong>St. Dominic College of Asia</strong></div>
+                    </div>
+                </div>
+                <aside class="feature-visual" aria-label="e-RoomReserve project identity">
+                    <div class="visual-orbit orbit-one" aria-hidden="true"></div>
+                    <div class="visual-orbit orbit-two" aria-hidden="true"></div>
+                    <div class="logo-card">
+                        <img src="e-roomreserve-logo.png" alt="e-RoomReserve project logo" class="project-logo" />
+                    </div>
+                    <p class="visual-caption"><span class="status-dot" aria-hidden="true"></span> Connected spaces. Better campus flow.</p>
+                    <span class="visual-index" aria-hidden="true">01 / 01</span>
+                </aside>
+            </article>
 
-                        <div class="project-card-body">
-                            <img
-                                src="e-roomreserve-logo.png"
-                                alt="e-RoomReserve logo"
-                                class="project-logo"
-                            />
-                            <h2 class="tagesschrift-regular">e-RoomReserve</h2>
-                            <p class="project-subtitle tagesschrift-regular">
-                                AI-Driven Smart Campus Space Optimization System
-                            </p>
-                            <p class="project-desc tagesschrift-regular">
-                                An AI-integrated room reservation and occupancy monitoring system for St. Dominic College of Asia, combining mobile and web apps with BLE beacon presence detection.
-                            </p>
-                            <p class="project-meta tagesschrift-regular">
-                                Capstone Project • St. Dominic College of Asia
-                            </p>
-                            <p class="project-tech tagesschrift-regular">
-                                Bluetooth Low Energy (BLE)
-                            </p>
-                            <div class="project-tags">
-                                <span>Next.js</span>
-                                <span>React Native</span>
-                                <span>Firebase</span>
-                                <span>ESP32</span>
-                            </div>
-                            <button
-                                type="button"
-                                class="btn btn-primary tagesschrift-regular"
-                                data-bs-toggle="modal"
-                                data-bs-target="#projectModal"
-                            >
-                                View Project
-                            </button>
-                        </div>
+            <section id="objectives" class="objectives-section" aria-labelledby="objectives-title">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">What we set out to do</p>
+                        <h2 id="objectives-title">The objectives</h2>
+                    </div>
+                    <p class="section-side-note">Seven goals guiding the design, development, and evaluation of e-RoomReserve.</p>
+                </div>
+
+                <div class="study-aim">
+                    <span class="aim-label">Study aim</span>
+                    <p>Design and develop an AI-integrated room reservation and occupancy monitoring system using Bluetooth Low Energy (BLE) beacon technology to improve space utilization, enforce reservation policies, and support efficient facility management at St. Dominic College of Asia.</p>
+                </div>
+
+                <div class="objectives-grid">
+                    <article class="objective-card">
+                        <span class="objective-number">01</span>
+                        <div><h3>Make reservations paperless</h3><p>Design a mobile and web application for room requests, bulk scheduling of recurring classes, faculty approvals, reservation tracking, and user notifications. Provide tailored interfaces for students, faculty, utility staff, building administrators, and super administrators.</p></div>
+                    </article>
+                    <article class="objective-card">
+                        <span class="objective-number">02</span>
+                        <div><h3>Verify presence with BLE</h3><p>Use the ESP32 BLE Beacon Module to confirm a user is near a room before a reservation activates, monitor occupancy in real time, and mark a room vacant when the registered device leaves beacon range after a configurable timeout.</p></div>
+                    </article>
+                    <article class="objective-card">
+                        <span class="objective-number">03</span>
+                        <div><h3>Alert staff when attention is needed</h3><p>Notify staff about BLE signal loss during an active booking, occupancy past the scheduled end time, and cases that need physical inspection as a fallback verification step.</p></div>
+                    </article>
+                    <article class="objective-card">
+                        <span class="objective-number">04</span>
+                        <div><h3>Improve reservation control</h3><p>Reduce scheduling conflicts, unverified room use, and administrative workload through faculty-verified check-in, role-based access, and automated conflict detection.</p></div>
+                    </article>
+                    <article class="objective-card">
+                        <span class="objective-number">05</span>
+                        <div><h3>Recommend spaces and learn from feedback</h3><p>Suggest alternative rooms using capacity, amenities, and size; link event-related reservations to DC Space for cross-system event tracking; and analyze post-reservation feedback by gender to inform facility maintenance.</p></div>
+                    </article>
+                    <article class="objective-card">
+                        <span class="objective-number">06</span>
+                        <div><h3>Turn usage into useful insight</h3><p>Analyze room-use logs, occupancy data, and survey responses to help faculty and administrators improve scheduling, enforce policies, and manage facilities.</p></div>
+                    </article>
+                    <article class="objective-card objective-card-last">
+                        <span class="objective-number">07</span>
+                        <div><h3>Evaluate the system</h3><p>Assess performance, usability, and effectiveness through unit testing, integration testing, and user acceptance testing in the St. Dominic College of Asia context.</p></div>
                     </article>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Project Details Modal -->
-    <div
-        class="modal fade project-modal"
-        id="projectModal"
-        tabindex="-1"
-        aria-labelledby="projectModalLabel"
-        aria-hidden="true"
-    >
-        <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title tagesschrift-regular" id="projectModalLabel">e-RoomReserve</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <section class="team-section" aria-labelledby="team-title">
+                <div class="team-photo-wrap">
+                    <img src="eroomreserve-group-presentation.png" alt="The four e-RoomReserve Group 4 members presenting their project in a classroom." class="team-photo" loading="lazy" />
+                    <span class="photo-label"><span class="photo-label-dot" aria-hidden="true"></span> Group 4 · Project presentation</span>
                 </div>
-                <div class="modal-body">
-                    <div class="project-detail-hero">
-                        <img
-                            src="e-roomreserve-logo.png"
-                            alt="e-RoomReserve logo"
-                            class="project-modal-logo"
-                        />
-                        <p class="project-detail-kicker tagesschrift-regular">
-                            Capstone Project • May 2026
-                        </p>
-                        <h3 class="project-detail-name tagesschrift-regular">e-RoomReserve</h3>
-                        <p class="project-detail-sub tagesschrift-regular">
-                            AI-Driven Smart Campus Space Optimization System
-                        </p>
+                <div class="team-content">
+                    <p class="eyebrow">The people behind the project</p>
+                    <h2 id="team-title">Built together.<br /><span>Presented with pride.</span></h2>
+                    <p class="team-intro">Four teammates, one shared goal: make campus spaces easier to reserve and manage.</p>
+                    <ul class="team-list">
+                        <li><span class="team-initials">CO</span><span><strong>Cybeir Kim Otchia</strong><small>Front End Developer</small></span></li>
+                        <li><span class="team-initials">JM</span><span><strong>Joseph Emmanuel Magno</strong><small>Back-end Developer</small></span></li>
+                        <li><span class="team-initials">JA</span><span><strong>John Cyrus Agoncillo</strong><small>Quality Assurance Engineer &amp; Technical Writer</small></span></li>
+                        <li><span class="team-initials">AE</span><span><strong>Adrian Echipari</strong><small>Scrum Master</small></span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="build-section" aria-labelledby="build-title">
+                <div class="build-copy">
+                    <p class="eyebrow">Under the hood</p>
+                    <h2 id="build-title">A connected<br /><span>campus experience.</span></h2>
+                    <p>Web and mobile tools meet cloud services and room-level sensing to support one reservation journey, from request to occupancy monitoring.</p>
+                </div>
+                <div class="technology-panel">
+                    <p class="technology-label">Core technologies</p>
+                    <div class="technology-list" aria-label="Technologies used">
+                        <span>Next.js</span><span>React</span><span>React Native</span><span>Expo</span><span>TypeScript</span><span>Tailwind CSS</span><span>Firebase</span><span>Supabase Storage</span><span>BLE</span><span>ESP32</span><span>VADER</span>
                     </div>
-
-                    <img
-                        src="e-roomreserve-screenshot.png"
-                        alt="e-RoomReserve Sign In screen"
-                        class="project-detail-shot"
-                    />
-
-                    <section class="project-detail-section">
-                        <h4 class="tagesschrift-regular">Official Title</h4>
-                        <p class="tagesschrift-regular">
-                            e-RoomReserve: AI-Driven Smart Campus Space Optimization System with Real-Time Occupancy Detection and Autonomous Reservation Control using Bluetooth Low Energy (BLE) Technology
-                        </p>
-                    </section>
-
-                    <section class="project-detail-section">
-                        <h4 class="tagesschrift-regular">Overview</h4>
-                        <p class="tagesschrift-regular">
-                            e-RoomReserve is an AI-integrated room reservation and occupancy monitoring system developed for St. Dominic College of Asia. It addresses inefficiencies in the school’s manual room scheduling process by combining a mobile and web application, BLE beacon-based presence detection using ESP32, a faculty approval workflow, automated staff notifications, AI-based room recommendations, and sentiment analysis of post-reservation feedback.
-                        </p>
-                    </section>
-
-                    <section class="project-detail-section">
-                        <h4 class="tagesschrift-regular">Problem</h4>
-                        <p class="tagesschrift-regular">
-                            Campus rooms were managed through digital logbooks, verbal coordination, and visual inspection. That led to no-shows, double bookings, unverified occupancy, and extra work for faculty and staff. Users also had no way to find a suitable available room based on capacity, type, and amenities.
-                        </p>
-                    </section>
-
-                    <section class="project-detail-section">
-                        <h4 class="tagesschrift-regular">Key Capabilities</h4>
-                        <ul class="tagesschrift-regular">
-                            <li>Paperless reservations, faculty approval, bulk class scheduling, and status tracking on mobile and web</li>
-                            <li>ESP32 BLE beacon presence detection that verifies the user is near the room before activating a reservation</li>
-                            <li>Real-time occupancy monitoring with automated vacancy handling after a configurable timeout</li>
-                            <li>Staff alerts for BLE signal loss, overtime occupancy, and fallback physical inspection</li>
-                            <li>AI room recommendations using content-based filtering when a preferred room is unavailable</li>
-                            <li>Post-reservation feedback with VADER sentiment analysis to support facility decisions</li>
-                        </ul>
-                    </section>
-
-                    <section class="project-detail-section">
-                        <h4 class="tagesschrift-regular">Architecture</h4>
-                        <p class="tagesschrift-regular">
-                            The system uses a four-layer architecture: a Presentation Layer (React Native/Expo mobile app and Next.js web portal), an Application Layer (Next.js API routes), a Data Layer (Firebase and Supabase), and a Device Layer (ESP32 BLE beacons). Role-based access covers students, faculty, utility staff, building administrators, and super administrators.
-                        </p>
-                    </section>
-
-                    <section class="project-detail-section">
-                        <h4 class="tagesschrift-regular">Tech Stack</h4>
-                        <div class="project-tags project-tags-modal">
-                            <span>Next.js</span>
-                            <span>React Native / Expo</span>
-                            <span>Firebase</span>
-                            <span>Firestore</span>
-                            <span>Supabase</span>
-                            <span>ESP32 BLE</span>
-                            <span>VADER</span>
-                            <span>Agile / Scrum</span>
-                        </div>
-                    </section>
-
-                    <section class="project-detail-section project-detail-section-last">
-                        <h4 class="tagesschrift-regular">Institution</h4>
-                        <p class="tagesschrift-regular mb-0">
-                            School of Communication, Multimedia, and Computer Studies<br />
-                            St. Dominic College of Asia • City of Bacoor, Cavite
-                        </p>
-                    </section>
+                    <a class="text-link build-link" href="https://eroomreserve.vercel.app/" target="_blank" rel="noopener noreferrer">Visit e-RoomReserve <span aria-hidden="true">↗</span></a>
                 </div>
-            </div>
+            </section>
+
+            <article class="past-project" aria-labelledby="sarisite-title">
+                <div class="past-project-heading">
+                    <div class="past-project-logo-wrap">
+                        <img class="past-project-logo" src="sarisite-logo.png" alt="SariSite sari-sari store logo" loading="lazy" />
+                    </div>
+                    <div class="past-project-title">
+                        <p class="eyebrow">Past website project <span>·</span> Group 4 · 2025</p>
+                        <h2 id="sarisite-title">SariSite <span>— Sari-Sari Store Online Ordering System</span></h2>
+                    </div>
+                </div>
+                <p class="past-project-description">Our project explored how an online browsing and ordering system could make neighborhood sari-sari stores more accessible to subdivision residents. SariSite was designed to make it easier for customers to browse products and place orders, while helping the store owner manage orders and deliveries.</p>
+                <p class="past-project-role"><strong>My role: Front-End Developer.</strong> I worked on the customer and admin interfaces with our Group 4 team.</p>
+                <nav class="past-project-links" aria-label="SariSite source code">
+                    <a href="https://github.com/otchia/sari-sari-store-project" target="_blank" rel="noopener noreferrer">Backend Repository <span aria-hidden="true">↗</span></a>
+                    <a href="https://github.com/otchia/sari-sari-store-project-frontend" target="_blank" rel="noopener noreferrer">Frontend Repository <span aria-hidden="true">↗</span></a>
+                </nav>
+                <h3 class="past-project-team-heading">Project Team</h3>
+                <ul class="past-project-team">
+                    <li><strong>Adrian Echepari</strong><span>Scrum Master</span></li>
+                    <li><strong>John Cyrus Agoncillo</strong><span>System Analyst</span></li>
+                    <li><strong>Joseph Emmanuel Magno</strong><span>Back-End Developer</span></li>
+                    <li><strong>Cybeir Kim Otchia</strong><span>Front-End Developer</span></li>
+                </ul>
+            </article>
+
+            <footer class="page-footer"><a href="#projects">Back to top <span aria-hidden="true">↑</span></a><span>Cybeir Kim Otchia · Projects</span></footer>
         </div>
-    </div>
+    </main>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
+
+

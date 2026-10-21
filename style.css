@@ -1,83 +1,49 @@
-/* Apply Tagesschrift font globally */
-body {
-    font-family: "Tagesschrift", system-ui, sans-serif;
-    color: white;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+.home-main { display: flex; flex-direction: column; padding-top: 118px; }
+.home-main > .container { display: flex; flex: 1; flex-direction: column; justify-content: center; }
+.home-hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(310px, .85fr); align-items: center; gap: clamp(40px, 8vw, 100px); min-height: 570px; padding: 22px 0 34px; }
+.home-copy { position: relative; z-index: 1; }
+.home-copy .eyebrow { margin-bottom: 20px; }
+.home-copy h1 { margin: 0; font-size: clamp(4rem, 8vw, 7rem); font-weight: 650; letter-spacing: -.085em; line-height: .9; }
+.home-copy h1 span { color: var(--mint); }
+.home-role { margin: 22px 0 11px; color: #e2e8df; font-size: 1rem; font-weight: 600; }
+.home-role span { margin: 0 5px; color: var(--gold); }
+.home-description { max-width: 535px; margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.8; }
+.home-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.home-note { display: flex; align-items: center; gap: 10px; margin-top: 35px; color: #8ea7a8; font-size: .77rem; letter-spacing: .03em; }
+.home-note-line { width: 35px; height: 1px; background: var(--gold); }
+.home-portrait-column { position: relative; display: grid; min-height: 430px; place-items: center; }
+.portrait-glow { position: absolute; width: min(88%, 365px); aspect-ratio: 1; border: 1px solid rgba(145, 224, 194, .18); border-radius: 50%; background: radial-gradient(circle, rgba(34, 94, 91, .2), transparent 68%); box-shadow: 0 0 0 27px rgba(145, 224, 194, .025), 0 0 0 55px rgba(145, 224, 194, .02); }
+.portrait-card { position: relative; z-index: 1; width: min(77%, 300px); margin: 0; overflow: hidden; border: 1px solid rgba(223, 241, 231, .2); border-radius: 150px 150px 24px 24px; background: #153640; box-shadow: 0 26px 75px rgba(0, 0, 0, .3); transform: rotate(2deg); }
+.home-portrait { display: block; width: 100%; height: 365px; object-fit: cover; object-position: center top; }
+.portrait-card figcaption { display: grid; gap: 2px; padding: 15px 18px 17px; background: linear-gradient(130deg, #153640, #0f2932); }
+.portrait-card figcaption span { color: var(--ink); font-size: .91rem; font-weight: 650; }
+.portrait-card figcaption small { color: var(--muted); font-size: .73rem; }
+.portrait-sticker { position: absolute; z-index: 2; right: 2%; bottom: 45px; display: flex; align-items: center; gap: 10px; padding: 12px 15px; border: 1px solid rgba(240, 193, 138, .28); border-radius: 13px; color: #f2d2ad; background: rgba(14, 38, 44, .95); box-shadow: 0 12px 32px rgba(0, 0, 0, .25); font-size: .74rem; font-weight: 650; line-height: 1.25; transform: rotate(-5deg); }
+.portrait-sticker b { color: var(--gold); font-size: 1.35rem; }
+.home-project { display: grid; grid-template-columns: 76px minmax(0, 1fr) 48px; align-items: center; gap: 20px; margin: 12px 0 20px; padding: 22px 25px; border: 1px solid var(--line); border-radius: 19px; background: linear-gradient(115deg, rgba(19, 50, 59, .88), rgba(10, 31, 39, .88)); transition: border-color .2s ease, transform .2s ease; }
+.home-project:hover { transform: translateY(-2px); border-color: rgba(145, 224, 194, .35); }
+.home-project-mark { display: grid; width: 72px; height: 72px; place-items: center; overflow: hidden; border-radius: 15px; background: white; }
+.home-project-mark img { width: 90%; height: auto; object-fit: contain; }
+.home-project-copy .eyebrow { margin-bottom: 4px; font-size: .65rem; }
+.home-project-copy h2 { margin: 0 0 4px; color: var(--ink); font-size: 1.3rem; font-weight: 650; letter-spacing: -.035em; }
+.home-project-copy p:last-child { max-width: 670px; margin: 0; color: var(--muted); font-size: .83rem; }
+.project-arrow { display: grid; width: 42px; height: 42px; place-items: center; border: 1px solid rgba(145, 224, 194, .25); border-radius: 50%; color: var(--mint); font-size: 1.1rem; text-decoration: none; }
+.project-arrow:hover { color: var(--night); background: var(--mint); }
+@media (max-width: 767px) {
+  .home-main { padding-top: 100px; }
+  .home-hero { grid-template-columns: 1fr; gap: 10px; padding-top: 28px; }
+  .home-copy h1 { font-size: clamp(4rem, 15vw, 6.2rem); }
+  .home-portrait-column { min-height: 390px; }
+  .home-portrait { height: 320px; }
+  .portrait-sticker { right: 7%; bottom: 32px; }
 }
-
-/* Optional reusable class */
-.tagesschrift-regular {
-    font-family: "Tagesschrift", system-ui, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-/* Background Animation */
-.large-header {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    z-index: -1;
-    background: #333;
-}
-
-#large-header {
-    background-image: url('https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-#connect-canvas {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-}
-
-/* Hero Section */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 2rem;
-    box-sizing: border-box;
-}
-
-.hero p {
-    font-size: 1.4rem;
-    line-height: 1.8;
-}
-
-/* Navbar */
-.navbar {
-    background: rgba(0, 0, 0, 0.7) !important;
-}
-
-.navbar-brand, .nav-link {
-    color: rgb(236, 235, 242) !important;
-}
-
-.nav-link:hover {
-    color: #3336df !important;
-}
-
-/* Responsive Fix */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        padding: 2rem 1rem;
-        background: rgba(0, 0, 0, 0.3);
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
+@media (max-width: 480px) {
+  .home-hero { gap: 0; }
+  .home-role { font-size: .89rem; }
+  .home-description { font-size: .92rem; }
+  .home-actions { align-items: flex-start; flex-direction: column; }
+  .home-project { grid-template-columns: 54px minmax(0, 1fr) 38px; gap: 12px; padding: 17px 14px; }
+  .home-project-mark { width: 52px; height: 52px; border-radius: 12px; }
+  .home-project-copy p:last-child { font-size: .75rem; }
+  .project-arrow { width: 36px; height: 36px; }
 }

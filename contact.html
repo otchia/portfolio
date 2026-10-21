@@ -1,89 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybeir Kim Otchia | Contact</title>
-
-    <!-- Google Font: Tagesschrift -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="Contact.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#081920" />
+    <title>Contact | Cybeir Kim Otchia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="portfolio.css" />
+    <link rel="stylesheet" href="Contact.css" />
 </head>
 <body>
-    <!-- Background Animation -->
-    <div id="large-header" class="large-header">
-        <canvas id="connect-canvas"></canvas>
-    </div>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div id="large-header" class="large-header" aria-hidden="true"><canvas id="connect-canvas"></canvas></div>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Main navigation">
         <div class="container">
-            <a class="navbar-brand tagesschrift-regular" href="index.html">Cybeir Kim Otchia</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link tagesschrift-regular" href="about.html">About</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link tagesschrift-regular" href="projects.html">Projects</a>
-                    </li>
-                
-                    <li class="nav-item">
-                        <a class="nav-link tagesschrift-regular" href="tech-stack.html">Tech Stack</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link tagesschrift-regular" href="certificates.html">Certificates</a>
-                    </li>
-                
-                    <li class="nav-item">
-                        <a class="nav-link tagesschrift-regular" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
+            <a class="navbar-brand" href="index.html"><span class="brand-mark" aria-hidden="true">C</span> Cybeir Kim Otchia</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav"><ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="tech-stack.html">Tech Stack</a></li>
+                <li class="nav-item"><a class="nav-link" href="certificates.html">Certificates</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contact.html" aria-current="page">Contact</a></li>
+            </ul></div>
         </div>
     </nav>
 
-    <!-- Contact Section -->
-    <section class="contact d-flex align-items-center justify-content-center text-center">
+    <main class="site-main contact-main">
         <div class="container">
-            <!-- Apply Tagesschrift font to contact section text -->
-            <h1 class="display-4 tagesschrift-regular">Contact Me</h1>
-            <p class="lead tagesschrift-regular">Reach out to me via email or through social media. I’m always happy to hear from you!</p>
-            
-            <!-- GitHub Button -->
-            <div class="contact-item mt-4">
-                <a href="https://github.com/otchia" target="_blank" class="btn btn-light">
-                    <img src="github-image.png" alt="GitHub" class="contact-icon">
-                    <span class="ms-2 tagesschrift-regular">GitHub</span>
-                </a>
-            </div>
-
-            <!-- LinkedIn Button -->
-            <div class="contact-item mt-3">
-                <a href="https://www.linkedin.com/in/cybeir-kim-otchia-2b23ab354/" target="_blank" class="btn btn-info">
-                    <img src="link in-image.png" alt="LinkedIn" class="contact-icon">
-                    <span class="ms-2 tagesschrift-regular">LinkedIn</span>
-                </a>
-            </div>
+            <section class="contact-layout" aria-labelledby="contact-title">
+                <div class="contact-copy">
+                    <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Let’s connect</p>
+                    <h1 id="contact-title">Have a project<br />in mind? <span>Say hello.</span></h1>
+                    <p>Reach out through my profiles below. I’m always happy to connect, talk about technology, and hear about new ideas.</p>
+                    <div class="contact-links">
+                        <a class="contact-link-card" href="https://github.com/otchia" target="_blank" rel="noopener noreferrer">
+                            <img src="github-image.png" alt="" /><span><strong>GitHub</strong><small>See my code and repositories</small></span><b aria-hidden="true">↗</b>
+                        </a>
+                        <a class="contact-link-card" href="https://www.linkedin.com/in/cybeir-kim-otchia-2b23ab354/" target="_blank" rel="noopener noreferrer">
+                            <img src="link in-image.png" alt="" /><span><strong>LinkedIn</strong><small>Connect with me professionally</small></span><b aria-hidden="true">↗</b>
+                        </a>
+                    </div>
+                </div>
+                <aside class="contact-aside" aria-label="Contact note">
+                    <div class="contact-orbit" aria-hidden="true">↗</div>
+                    <p class="contact-aside-label">Open to connection</p>
+                    <h2>Good work<br /><span>starts with a conversation.</span></h2>
+                    <p>Thanks for taking the time to explore my portfolio.</p>
+                    <span class="contact-aside-mark" aria-hidden="true">C · K</span>
+                </aside>
+            </section>
+            <footer class="site-footer"><a href="index.html">← Home</a><span>Cybeir Kim Otchia · Contact</span></footer>
         </div>
-    </section>
-
-    <!-- Bootstrap JS -->
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
